@@ -44,6 +44,21 @@ Maven creates the project files in a new folder with the same name as the _Artif
 
 ![create new kotlin project](./resources/create-new-project-enable-auto-import.jpg)
 
+## Azure Configuration
+
+By default the pom.xml file is opened when the project is created.
+
+You can set the 
+
+1. Function App Name
+2. Function App Region
+
+Run the following command for a complete list of regions. Choose the location by the "name" field in the returned json array. 
+
+```bash
+az account list-locations
+```
+
 ![create new kotlin project](./resources/create-new-project-skelton.jpg)
 
 ![create new kotlin project](./resources/project-default-http-trigger.jpg)
