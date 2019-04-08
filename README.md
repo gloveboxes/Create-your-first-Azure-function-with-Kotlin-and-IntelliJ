@@ -232,3 +232,9 @@ From the Maven pop-out, under Plugins, select **azure-functions:add**
 To deploy the staging directory to target Azure Functions. If target Azure Functions does not exist already, it will be created.
 
 ![Azure functions deploy](./resources/azure-function-deploy.jpg)
+
+## Building an End to End Secure, Scalable IoT Serverless Solution
+
+The next article will be about creating an end to end IoT Serverless solution with Kotlin Azure Functions and Azure SignalR.
+
+![end to end solution](./resources/kotlin-end-to-end-iot-serverless-functions-signalr.png)
