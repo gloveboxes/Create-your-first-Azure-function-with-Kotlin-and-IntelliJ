@@ -16,8 +16,8 @@ This is a walkthrough for creating Kotlin Azure Functions.
 - [Azure Functions Java developer guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?WT.mc_id=devto-blog-dglover)
 - [Library for Azure Java Functions](https://github.com/Azure/azure-functions-java-library)
 - [Register Azure Functions binding extensions](https://docs.microsoft.com/bs-latn-ba/azure/azure-functions/functions-bindings-register?WT.mc_id=devto-blog-dglover)
-- [Maven Plugin for Azure Functions](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable)
-- [Azure Toolkit for IntelliJ](https://docs.microsoft.com/en-us/java/azure/intellij/azure-toolkit-for-intellij?view=azure-java-stable)
+- [Maven Plugin for Azure Functions](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable&WT.mc_id=devto-blog-dglover)
+- [Azure Toolkit for IntelliJ](https://docs.microsoft.com/en-us/java/azure/intellij/azure-toolkit-for-intellij?view=azure-java-stable&WT.mc_id=devto-blog-dglover)
 
 ##  2. <a name='Setupyourdevelopmentenvironment'></a>Set up your development environment
 
@@ -30,7 +30,7 @@ To develop a function with Java and IntelliJ, install the following software:
 
 > The JAVA_HOME environment variable must be set to the install location of the JDK to complete the steps in this article.
 
- We recommend that you install [Azure Functions Core Tools, version 2](functions-run-local.md#v2). It provides a local development environment for writing, running, and debugging Azure Functions.
+ We recommend that you install [Azure Functions Core Tools, version 2](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local). It provides a local development environment for writing, running, and debugging Azure Functions.
 
 ##  3. <a name='CreateanAzureFunctionproject'></a>Create an Azure Function project
 
@@ -135,7 +135,6 @@ In the browser add a name parameter to the query string. For example, http://loc
 
 ![create new kotlin project](./resources/project-test-http-trigger.jpg)
 
-
 ##  16. <a name='Stopthefunction'></a>Stop the function
 
 Click the stop icon to stop the function from running.
@@ -208,7 +207,7 @@ Click the Stop icon to detach the debugger and stop the Azure Function
 
 ##  28. <a name='AddingnewAzureFunctionTriggers'></a>Adding new Azure Function Triggers
 
-[azure-functions:add](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable#azure-functionsadd)
+[azure-functions:add](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable#azure-functionsadd&WT.mc_id=devto-blog-dglover)
 
 The azure-functions:add Maven archetype supports the following trigger types.
 
@@ -228,7 +227,7 @@ From the Maven pop-out, under Plugins, select **azure-functions:add**
 
 ##  29. <a name='DeployingKotlinAzureFunctionstoAzure'></a>Deploying Kotlin Azure Functions to Azure
 
-[azure-functions:deploy](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable#azure-functionsdeploy)
+[azure-functions:deploy](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable#azure-functionsdeploy&WT.mc_id=devto-blog-dglover)
 
 To deploy the staging directory to target Azure Functions. If target Azure Functions does not exist already, it will be created.
 
