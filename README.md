@@ -10,6 +10,8 @@
 
 This is an end to end walk through for creating Kotlin Azure Functions.
 
+Kotlin is an emerging development language rated as one of the most loved languages in the last [Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey/2018#technology). It is becoming the default language for Android Development and being eyed with interested by those with investments in Java and looking for a more modern JVM language.
+
 ##  1. <a name='ReferenceDocumentation'></a>Reference Documentation
 
 - [Create your first Azure function with Java and IntelliJ](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-maven-intellij?WT.mc_id=devto-blog-dglover)
@@ -27,10 +29,9 @@ To develop a function with Java and IntelliJ, install the following software:
 - [Apache Maven](https://maven.apache.org), version 3.0 or higher
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/download), Community or Ultimate versions with Maven
 - [Azure CLI](https://docs.microsoft.com/cli/azure?WT.mc_id=devto-blog-dglover)
+- [Azure Functions Core Tools, version 2](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?WT.mc_id=devto-blog-dglover)
 
 > The JAVA_HOME environment variable must be set to the install location of the JDK to complete the steps in this article.
-
- We recommend that you install [Azure Functions Core Tools, version 2](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local). It provides a local development environment for writing, running, and debugging Azure Functions.
 
 ##  3. <a name='CreateanAzureFunctionproject'></a>Create an Azure Function project
 
