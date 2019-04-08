@@ -197,7 +197,7 @@ Click the http://localhost:7071/api/HttpTrigger-Java link to initiate the Http T
 
 Using the debugger controls, step through the Azure Function code.
 
-![create new kotlin project](./resources/project-debug-step-through-code.jpg)
+![kotlin debugging](./resources/project-debug-step-through-code.jpg)
 
 #### Stop the Debugger and Azure Function
 
@@ -205,10 +205,11 @@ Click the Stop icon to detach the debugger and stop the Azure Function
 
 ![create new kotlin project](./resources/project-debugger-stop.jpg)
 
+### Adding new Azure Function Triggers
 
-### Adding Additional Azure Function Triggers 
+[azure-functions:add](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable#azure-functionsadd)
 
-azure-functions:add
+The azure-functions:add Maven archetype supports the following trigger types.
 
 - HTTP Trigger
 - Azure Storage Blob Trigger
@@ -219,3 +220,15 @@ azure-functions:add
 - Cosmos DB Trigger
 - Service Bus Queue Trigger
 - Service Bus Topic Trigger
+
+From the Maven pop-out, under Plugins, select **azure-functions:add**
+
+![Azure functions add](./resources/azure-function-add.jpg)
+
+### Deploying Kotlin Azure Functions to Azure
+
+[azure-functions:deploy](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable#azure-functionsdeploy)
+
+To deploy the staging directory to target Azure Functions. If target Azure Functions does not exist already, it will be created.
+
+![Azure functions deploy](./resources/azure-function-deploy.jpg)
