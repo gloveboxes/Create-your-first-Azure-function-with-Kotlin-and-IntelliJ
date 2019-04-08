@@ -8,11 +8,14 @@
 |Programming Language| Kotlin|
 |Date|As at April 2019|
 
-**Documentation** 
+## Documentation
+
 - [Create your first Azure function with Java and IntelliJ](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-maven-intellij?WT.mc_id=devto-blog-dglover)
 - [Azure Functions Java developer guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java?WT.mc_id=devto-blog-dglover)
 - [Library for Azure Java Functions](https://github.com/Azure/azure-functions-java-library)
 - [Register Azure Functions binding extensions](https://docs.microsoft.com/bs-latn-ba/azure/azure-functions/functions-bindings-register?WT.mc_id=devto-blog-dglover)
+- [Maven Plugin for Azure Functions](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable)
+- [Azure Toolkit for IntelliJ](https://docs.microsoft.com/en-us/java/azure/intellij/azure-toolkit-for-intellij?view=azure-java-stable)
 
 ## Set up your development environment
 
@@ -27,7 +30,7 @@ To develop a function with Java and IntelliJ, install the following software:
 
  We recommend that you install [Azure Functions Core Tools, version 2](functions-run-local.md#v2). It provides a local development environment for writing, running, and debugging Azure Functions.
 
-## Create a Functions project
+## Create aa Azure Function project
 
 1. In IntelliJ IDEA, select **Create New Project**.  
 1. In the **New Project** window, select **Maven** from the left pane.
@@ -182,12 +185,37 @@ From the **run/debug configuration selector** select the Maven azure-functions:r
 
 From the **run/debug configuration selector** select the **Attach Debugger** configuration and click the green start debugger icon or press Shift+F9.
 
-![create new kotlin project](./resources/project-debug-select-attach-debugger.jpg)
-
 ![create new kotlin project](./resources/project-debug-debugger-attached.jpg)
+
+#### Initiate the Http Trigger in Debug Mode
+
+Click the http://localhost:7071/api/HttpTrigger-Java link to initiate the Http Trigger.
 
 ![create new kotlin project](./resources/project-debug-switch-to-run.jpg)
 
+#### Step through the Http Trigger Azure Function with the Debugger
+
+Using the debugger controls, step through the Azure Function code.
+
 ![create new kotlin project](./resources/project-debug-step-through-code.jpg)
 
+#### Stop the Debugger and Azure Function
+
+Click the Stop icon to detach the debugger and stop the Azure Function
+
 ![create new kotlin project](./resources/project-debugger-stop.jpg)
+
+
+### Adding Additional Azure Function Triggers 
+
+azure-functions:add
+
+- HTTP Trigger
+- Azure Storage Blob Trigger
+- Azure Storage Queue Trigger
+- Timer Trigger
+- Event Grid Trigger
+- Event Hub Trigger
+- Cosmos DB Trigger
+- Service Bus Queue Trigger
+- Service Bus Topic Trigger
