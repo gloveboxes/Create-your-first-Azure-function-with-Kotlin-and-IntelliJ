@@ -43,9 +43,27 @@ Maven creates the project files in a new folder with the same name as the _Artif
 
 ![create new kotlin project](./resources/create-new-project.jpg)
 
+## Specify the Maven basic Elements
+
+Define the GroupId and the ArtifactId for the project This information is added to the project pom.xml.
+
+The ArtifactId forms part of the Azure Function name in the pom.xml file.
+
+For more information see [Creating a new Maven project](https://www.jetbrains.com/help/idea/2018.3/maven-support.html?utm_content=2018.3&utm_medium=link&utm_source=product&utm_campaign=IC#create_new_maven_project)
+
 ![create new kotlin project](./resources/create-new-project-properties.jpg)
 
+## Confirm the Maven Project settings
+
+![Maven summary](./resources/create-new-project-summary.jpg)
+
+## Confirm Project Name and Location
+
 ![create new kotlin project](./resources/create-new-project-confirmation.jpg)
+
+The project structure will be created.
+
+## Enable Auto-Import
 
 ![create new kotlin project](./resources/create-new-project-enable-auto-import.jpg)
 
@@ -53,10 +71,10 @@ Maven creates the project files in a new folder with the same name as the _Artif
 
 By default the pom.xml file is opened when the project is created.
 
-You can set the 
+You can set the following project properties in the pom.xml file
 
-1. Function App Name
-2. Function App Region
+1. Azure Function App Name
+2. Azure Function App Region
 
 Run the following command for a complete list of regions. Choose the location by the "name" field in the returned json array. 
 
@@ -66,40 +84,103 @@ az account list-locations
 
 ![create new kotlin project](./resources/create-new-project-skelton.jpg)
 
+## Open the default Http Trigger
+
+The Azure Functions Maven Archetype will create an example Http Trigger. You will find this by navigating the **src** project directory.
+
 ![create new kotlin project](./resources/project-default-http-trigger.jpg)
+
+## Convert the Java Azure Function to Kotlin file
+
+Right mouse click the default Java Function named **Function** and select **Convert Java File to Kotlin File**. And voila, the Java file is magically convert a Kotlin project.
 
 ![create new kotlin project](./resources/project-convert-to-kotlin.jpg)
 
+The default Azure Function converted from Java will now look like beautiful Kotlin.
+
 ![create new kotlin project](./resources/project-converted-to-kotlin.jpg)
+
+## Configure the Project for Kotlin
+
+From the **Tools** menu, select **Kotlin**, then **Configure Kotlin in Project**
 
 ![create new kotlin project](./resources/project-configure-kotlin-in-project.jpg)
 
+## Enable All Modules containing Kotlin files
+
 ![create new kotlin project](./resources/project-configure-kotlin-in-project-confirm.jpg)
 
-![create new kotlin project](./resources/project-clean-package-run.jpg)
+## Clean and Package the Project
+
+From the Maven pop-out tab, expand **Lifecycle**, then run the **clean** followed by the **package** commands. This will build the Kotlin project.
 
 ![create new kotlin project](./resources/project-clean-package-results.jpg)
 
+## Execute Azure Functions Run
+
+From the Maven pop-out tab, expand **Plugins**, then run the **azure-functions:run**. This will start the Azure Functions Core Tools and bootstrap your Kotlin Azure Function.
+
+To test the function click the http://localhost:7071/api/HttpTrigger-Java link
+
 ![create new kotlin project](./resources/project-azure-functions-run.jpg)
+
+## Pass in a parameter on the Query String
+
+In the browser add a name parameter to the query string. For example http://localhost:7071/api/HttpTrigger-Java?name=dave and you will see the webpage echos the value passed in for name.
 
 ![create new kotlin project](./resources/project-test-http-trigger.jpg)
 
+
+## Stop the function
+
+Click the stop icon to stop the function from running.
+
 ![create new kotlin project](./resources/project-azure-functions-stop.jpg)
+
+## Enable Debugging
+
+Right mouse click on the **azure-functions:run** Maven Archetype and select **Create 'glovebox-function [...**
 
 ![create new kotlin project](./resources/project-enable-debug-azure-function-maven-debug.jpg)
 
+### Create Run/Debug Configuration
+
+Add **-DenableDebug** to the command line.
+
 ![create new kotlin project](./resources/project-enable-debug-azure-function-maven-debug-configure.jpg)
+
+### Enable Java Debugger Attach
+
+From **Run** menu, select **Edit Configuration**
 
 ![create new kotlin project](./resources/project-run-edit-configurations.jpg)
 
+#### Add New Configuration
+
+Click the **+** sign, then select **Remote**.
+
 ![create new kotlin project](./resources/project-run-edit-configurations-add-remote-config.jpg)
 
+#### Name the New Configuration
+
+In this case the configuration is named **Attach Debugger**
 
 ![create new kotlin project](./resources/project-run-edit-configurations-add-remote-attach-debugger.jpg)
 
+
+#### Set a breakpoint in the Kotlin Azure Function source
+
 ![create new kotlin project](./resources/project-debug-set-breakpoint.jpg)
 
+#### Run Debugger Enabled Configuration
+
+From the **run/debug configuration selector** select the Maven azure-functions:run configuration. and the click the green start icon or press Shift+F10.
+
 ![create new kotlin project](./resources/project-debug-run-debug-enabled-maven.jpg)
+
+#### Attach the Debugger
+
+From the **run/debug configuration selector** select the **Attach Debugger** configuration and click the green start debugger icon or press Shift+F9.
 
 ![create new kotlin project](./resources/project-debug-select-attach-debugger.jpg)
 
