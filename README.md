@@ -8,7 +8,7 @@
 |Programming Language| Kotlin|
 |Date|As at April 2019|
 
-This is a walk through for creating Kotlin Azure Functions.
+This is a walkthrough for creating Kotlin Azure Functions.
 
 ##  1. <a name='ReferenceDocumentation'></a>Reference Documentation
 
@@ -42,11 +42,11 @@ To develop a function with Java and IntelliJ, install the following software:
     - _ArtifactId_: azure-functions-archetype
     - _Version_: Use the latest version from [the central repository](https://mvnrepository.com/artifact/com.microsoft.azure/azure-functions-archetype) 
 1. Select **OK**, and then select **Next**.
-1. Enter your details for current project, and select **Finish**.
+1. Enter your details for the current project, and select **Finish**.
 
 Maven creates the project files in a new folder with the same name as the _ArtifactId_ value. The project's generated code is a simple [HTTP-triggered](/azure/azure-functions/functions-bindings-http-webhook) function that echoes the body of the triggering HTTP request.
 
-![create new kotlin project](./resources/create-new-project.jpg)
+![create new Kotlin project](./resources/create-new-project.jpg)
 
 ##  4. <a name='SpecifytheMavenbasicElements'></a>Specify the Maven basic Elements
 
@@ -81,7 +81,7 @@ You can set the following project properties in the pom.xml file
 1. Azure Function App Name
 2. Azure Function App Region
 
-Run the following command for a complete list of regions. Choose the location by the "name" field in the returned json array. 
+Run the following command for a complete list of regions. Choose the location by the "name" field in the returned JSON array.
 
 ```bash
 az account list-locations
@@ -97,7 +97,7 @@ The Azure Functions Maven Archetype will create an example Http Trigger. You wil
 
 ##  10. <a name='ConverttheJavaAzureFunctiontoKotlinfile'></a>Convert the Java Azure Function to Kotlin file
 
-Right mouse click the default Java Function named **Function** and select **Convert Java File to Kotlin File**. And voila, the Java file is magically convert a Kotlin project.
+Right mouse click the default Java Function named **Function** and select **Convert Java File to Kotlin File**. And voila, the Java file magically converts a Kotlin project.
 
 ![create new kotlin project](./resources/project-convert-to-kotlin.jpg)
 
@@ -131,7 +131,7 @@ To test the function click the http://localhost:7071/api/HttpTrigger-Java link
 
 ##  15. <a name='PassinaparameterontheQueryString'></a>Pass in a parameter on the Query String
 
-In the browser add a name parameter to the query string. For example http://localhost:7071/api/HttpTrigger-Java?name=dave and you will see the webpage echos the value passed in for name.
+In the browser add a name parameter to the query string. For example, http://localhost:7071/api/HttpTrigger-Java?name=dave and you will see the webpage echos the value passed in for name.
 
 ![create new kotlin project](./resources/project-test-http-trigger.jpg)
 
